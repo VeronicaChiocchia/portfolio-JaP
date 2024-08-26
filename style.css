@@ -8,6 +8,47 @@
   --black: #01110e;
   --sec-light-green: #b2e3da;
   --third-violet: #6b2c79;
+  --gutter-desktop: 24px;
+}
+
+body {
+  margin: 0;
+}
+
+/* Typography hierarchy */
+
+.h1 {
+  font-family: 'Inria Serif';
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px; /* 142.857% */
+}
+
+.h2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 60px; /* 200% */
+
+}
+
+.h2 span {
+  font-weight: 500;
+}
+
+.label-large {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.p-large {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px; /* 153.846% */
 }
 
 nav {
@@ -45,14 +86,15 @@ nav {
 
 .hero {
   background-image: url(./Img/Background.png);
-  height: 80vh;
+  height: calc(90vh - 80px);
   display: flex;
   flex-flow: row;
   /* justify-content: center; */
   /* align-items: center; */
   /* gap: 10px; */
   /* align-self: stretch; */
-  padding: var(--Vertical-padding-S, 40px) var(--Horizontal-margin, 80px) 0px var(--Horizontal-margin, 80px);
+  padding: var(--Vertical-padding-S, 40px) var(--Horizontal-margin, 80px) 0px
+    var(--Horizontal-margin, 80px);
 }
 
 .hero-img {
@@ -63,6 +105,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 40px;
+  translate: 0px 16px;
 }
 
 .hero-text {
@@ -71,9 +114,18 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--Gutter, 24px);
+  gap: --gutter-desktop;
   flex: 1 0 0;
   color: var(--Black, var(--black));
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
 }
 
 button {
@@ -81,16 +133,21 @@ button {
   padding: 16px 40px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border-radius: 0px 24px;
   background: var(--third-violet);
   box-shadow: 3px 4px 2px 0px rgba(0, 0, 0, 0.25);
+  color: var(--white);
 }
 
-h1 {
-  font-family: 'Inria Serif';
-  font-size: 42px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 60px; /* 142.857% */
+h1,
+h2 {
+  margin: 0;
+}
+
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
